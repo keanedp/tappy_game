@@ -4,15 +4,16 @@ extends Node2D
 class_name Pipes
 
 
-const SCROLL_SPEED: float = 120.0
+const OFFSCREEN: float = -500.0
+
 
 func _process(delta: float) -> void:
-	position.x -= SCROLL_SPEED * delta
+	position.x -= GameManager.SCROLL_SPEED * delta
 	check_offscreen()
 
 
 func check_offscreen() -> void:
-	if position.x < -500.0:
+	if position.x < OFFSCREEN:
 		queue_free()
 
 
