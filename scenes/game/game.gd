@@ -8,9 +8,11 @@ const PIPES = preload("res://scenes/pipes/pipes.tscn")
 @onready var pipe_spawn_upper: Marker2D = $PipeSpawnUpper
 @onready var pipe_spawn_lower: Marker2D = $PipeSpawnLower
 @onready var pipes_holder: Node = $PipesHolder
+@onready var plane: Tappy = $Plane
 
 
 func _ready() -> void:
+	SignalManager.on_plane_died.connect(_on_plane_died)
 	spawn_pipes()
 
 
@@ -29,10 +31,6 @@ func _on_spawn_timer_timeout() -> void:
 	spawn_pipes()
 
 
-func stop_pipes() -> void:
-	spawn_timer.stop()
-	for pipe in pipes_holder.get_children():
-		pipe.set_process(false)
-
 func _on_plane_died() -> void:
-	stop_pipes()
+	print("on plane died")
+	spawn_timer.stop()
