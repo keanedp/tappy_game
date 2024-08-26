@@ -23,3 +23,7 @@ func spawn_pipes() -> void:
 	var yPosition:float = randf_range(pipe_spawn_upper.position.y, pipe_spawn_lower.position.y)
 	new_pipes.position = Vector2(pipe_spawn_lower.position.x, yPosition)
 	pipes_holder.add_child(new_pipes)
+
+
+func _on_spawn_timer_timeout() -> void:
+	spawn_pipes()
