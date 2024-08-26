@@ -5,6 +5,9 @@ const GRAVITY: float = 1000.0
 const POWER: float = -350.0
 
 
+signal on_plane_died
+
+
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
@@ -34,3 +37,4 @@ func fly() -> void:
 func die() -> void:
 	set_physics_process(false)
 	animated_sprite_2d.stop()
+	on_plane_died.emit()
