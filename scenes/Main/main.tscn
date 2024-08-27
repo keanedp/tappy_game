@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://scenes/Main/main.gd" id="1_54h3k"]
 [ext_resource type="Texture2D" uid="uid://76rxiou3vbx0" path="res://assets/background/sky.png" id="1_fd7kw"]
-[ext_resource type="LabelSettings" uid="uid://m5e2lfia0u80" path="res://scenes/Main/LG_Red_72.tres" id="2_y6hsa"]
-[ext_resource type="LabelSettings" uid="uid://bth1udf1m2onv" path="res://scenes/Main/LG_Red_24.tres" id="3_10l8l"]
-[ext_resource type="LabelSettings" uid="uid://vy0de3e282t3" path="res://scenes/Main/LG_White_48.tres" id="3_d6a3b"]
+[ext_resource type="LabelSettings" uid="uid://m5e2lfia0u80" path="res://assets/LG_Red_72.tres" id="2_y6hsa"]
+[ext_resource type="LabelSettings" uid="uid://bth1udf1m2onv" path="res://assets/LG_Red_24.tres" id="3_10l8l"]
+[ext_resource type="LabelSettings" uid="uid://vy0de3e282t3" path="res://assets/LG_White_48.tres" id="3_d6a3b"]
 [ext_resource type="AudioStream" uid="uid://dlyuurthp18b6" path="res://assets/audio/bgm_menu.mp3" id="5_mlv38"]
 
 [sub_resource type="Animation" id="Animation_0th4i"]

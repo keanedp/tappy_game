@@ -31,7 +31,6 @@ func _on_screen_exited() -> void:
 
 
 func _on_plane_died() -> void:
-	print("pipes on plane died")
 	set_process(false)
 
 
