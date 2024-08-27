@@ -30,7 +30,7 @@ func fall(delta: float) -> void:
 
 
 func fly() -> void:
-	if Input.is_action_just_pressed(" fly"):
+	if Input.is_action_just_pressed("fly"):
 		velocity.y = POWER
 		animation_player.play("power")
 
