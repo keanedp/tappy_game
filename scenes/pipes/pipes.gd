@@ -25,7 +25,6 @@ func check_offscreen() -> void:
 
 
 func _on_screen_exited() -> void:
-	print("pipe exited screen")
 	set_process(false)
 	queue_free()
 
@@ -42,3 +41,4 @@ func _on_body_entered(body: Node2D) -> void:
 func _on_laser_body_entered(body: Node2D) -> void:
 	if body is Tappy:
 		score_sound.play()
+		ScoreManager.increment_score()

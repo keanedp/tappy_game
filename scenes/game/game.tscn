@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://di20bcplqkdp1"]
+[gd_scene load_steps=7 format=3 uid="uid://di20bcplqkdp1"]
 
 [ext_resource type="Texture2D" uid="uid://bgmhaxk4ffd7e" path="res://assets/background/rocks_2.png" id="1_g6dxn"]
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_vf84r"]
 [ext_resource type="PackedScene" uid="uid://c8cwy36oafsry" path="res://scenes/plane/plane.tscn" id="2_fon6n"]
 [ext_resource type="PackedScene" uid="uid://5bbefeavjtor" path="res://scenes/barrier/barrier.tscn" id="3_f3h28"]
 [ext_resource type="PackedScene" uid="uid://d4gqh5stv8pr0" path="res://scenes/game_over_ui/game_over_ui.tscn" id="5_3g4n5"]
+[ext_resource type="PackedScene" uid="uid://bylg3vfgkep75" path="res://scenes/hud/hud.tscn" id="6_yi7tg"]
 
 [node name="Game" type="Node2D"]
 position = Vector2(0, 2)
@@ -38,5 +39,7 @@ autostart = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GameOverUI" parent="CanvasLayer" instance=ExtResource("5_3g4n5")]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("6_yi7tg")]
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
