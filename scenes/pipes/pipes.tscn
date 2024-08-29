@@ -13,9 +13,13 @@ script = ExtResource("1_56xid")
 [node name="Upper" parent="." instance=ExtResource("1_yg7kb")]
 position = Vector2(0, -80)
 rotation = 3.14159
+collision_layer = 0
+collision_mask = 8
 
 [node name="Lower" parent="." instance=ExtResource("1_yg7kb")]
 position = Vector2(0, 80)
+collision_layer = 0
+collision_mask = 8
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(28, 0)

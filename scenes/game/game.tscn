@@ -42,9 +42,11 @@ position = Vector2(132, 477)
 
 [node name="Ceiling" parent="." instance=ExtResource("3_f3h28")]
 position = Vector2(1, -16)
+collision_mask = 8
 
 [node name="Floor" parent="." instance=ExtResource("3_f3h28")]
 position = Vector2(3, 864)
+collision_mask = 8
 
 [node name="PipeSpawnUpper" type="Marker2D" parent="."]
 position = Vector2(530, 340)
