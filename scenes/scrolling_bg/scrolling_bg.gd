@@ -1,0 +1,14 @@
+extends ParallaxBackground
+
+
+func _ready() -> void:
+	SignalManager.on_plane_died.connect(_on_plane_died)
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	scroll_offset.x -= GameManager.SCROLL_SPEED * delta
+
+
+func _on_plane_died() -> void:
+	set_process(false)
